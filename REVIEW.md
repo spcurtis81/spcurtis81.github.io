@@ -25,3 +25,8 @@ ICO transparency guidance: https://ico.org.uk/for-organisations/uk-gdpr-guidance
 
 ## Separate future app task
 Once Pages is approved, published and HTTPS verified, add support/privacy links on a new appropriate app branch and validate via normal workflow. Do not alter accepted iOS baseline during website preparation.
+
+
+## Automatic Pages activation exception
+
+On the first authorised source push, GitHub automatically enabled legacy main/root Pages and started run 40677403418. The agent had not enabled Pages or added a workflow. The run was cancelled (completed/cancelled) and the deployment list was empty. GitHub rejected Pages deletion with HTTP 422, stating deactivation is not allowed for this repository. To prevent further automatic branch publication, publishing mode was changed to workflow-only with no deployment workflow installed. Pages remains configured (`has_pages=true`), so do not describe it as disabled. The API still reported a building status after cancellation; no successful deployment was recorded. Publication remains unapproved. Account-site automatic activation must be considered before future changes.

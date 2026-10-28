@@ -2,7 +2,7 @@
 
 Source repository: https://github.com/spcurtis81/spcurtis81.github.io
 
-A small, static developer website with Boarding Time overview, support and draft privacy pages. **Source is public; GitHub Pages is not enabled.** Pushing source does not approve the draft policy or authorise website publication. Read [REVIEW.md](REVIEW.md) before release.
+A small, static developer website with Boarding Time overview, support and draft privacy pages. **Source is public; no Pages deployment is recorded.** GitHub automatically enabled legacy Pages on the first push. Its build was cancelled, and Pages was switched to workflow-only mode with no deployment workflow installed. GitHub refused the deactivation request. Pushing source does not approve the draft policy or authorise website publication. Read [REVIEW.md](REVIEW.md) before release.
 
 ## Architecture
 
@@ -46,7 +46,7 @@ After approval:
 
 1. Resolve REVIEW.md, approve policy copy, set the actual effective date, and remove draft banners, review-only notes and noindex metadata. Do not backdate the policy.
 2. Re-run checks, browser validation and the public-history disclosure audit.
-3. In repository Settings → Pages, choose GitHub Actions. Add a separately reviewed, manually triggered (`workflow_dispatch`) workflow; no automatic push trigger is needed initially.
+3. In repository Settings → Pages, confirm GitHub Actions is the publishing mode. Add a separately reviewed, manually triggered (`workflow_dispatch`) workflow; no automatic push trigger is needed initially.
 4. Follow GitHub's current custom Pages workflow: checkout, validate with Python, configure Pages, upload **only `dist/`** using `actions/upload-pages-artifact`, then deploy with `actions/deploy-pages`. Review current action versions and pin reviewed revisions. The deploy job needs `pages: write`, `id-token: write` and the `github-pages` environment. Never upload the entire repository as the site artifact.
 5. Run the approved workflow, then verify HTTPS, navigation, accessibility and unauthenticated policy access at all four URLs. Only then supply URLs to App Store Connect or a separate iOS integration task.
 

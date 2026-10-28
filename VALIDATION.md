@@ -20,3 +20,5 @@
 - Four-page source content and CSS retained unchanged. README now documents architecture, development/checks, approval-gated dist-only Pages deployment and future apps. REVIEW.md reflects the new repository.
 - Integration browser rerun: all four directory-style URLs return their intended pages at 390px with no horizontal overflow. Desktop landing page checked at 1280px; support FAQ toggled with Enter. New desktop/mobile captures remain ignored local evidence. No full assistive-technology certification or live Pages verification claimed.
 - `python3 scripts/check_site.py` and `git diff --check` passed. Public-source push does not enable Pages or remove legal draft markers.
+
+- Post-push exception: GitHub automatically enabled legacy Pages. Its only run 40677403418 was cancelled; no deployments recorded. Deactivation was rejected (422), so workflow-only mode now prevents branch auto-publication; no workflow exists. This supersedes earlier observations that Pages was disabled. See REVIEW.md. Live website publication is not claimed.
