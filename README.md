@@ -2,14 +2,14 @@
 
 Source repository: https://github.com/spcurtis81/spcurtis81.github.io
 
-A small, static developer website with Boarding Time overview, support and draft privacy pages. **Source is public; no Pages deployment is recorded.** GitHub automatically enabled legacy Pages on the first push. Its build was cancelled, and Pages was switched to workflow-only mode with no deployment workflow installed. GitHub refused the deactivation request. Pushing source does not approve the draft policy or authorise website publication. Read [REVIEW.md](REVIEW.md) before release.
+A small static developer website with Boarding Time overview, support and privacy pages. The developer approved the policy release candidate, legitimate-interests basis, personal Gmail support, 12-month manual deletion arrangements, provider suitability and public publication on 28 October 2026. Publication uses the manually triggered GitHub Pages workflow; only `dist/` is deployed. Historical review material remains in the public source repository but outside the website artifact. See [REVIEW.md](REVIEW.md).
 
 ## Architecture
 
 - `dist/index.html` — developer landing page.
 - `dist/boarding-time/index.html` — app overview.
 - `dist/boarding-time/support/index.html` — FAQ and approved email contact.
-- `dist/boarding-time/privacy/index.html` — policy review draft.
+- `dist/boarding-time/privacy/index.html` — privacy policy.
 - `dist/assets/styles.css` — shared responsive styles and system fonts.
 - `dist/.nojekyll` — direct static hosting marker.
 - `scripts/check_site.py` — local structural/link checks.
@@ -38,25 +38,24 @@ git diff --check
 
 The checker validates nesting, local links/fragments, page landmarks, unique IDs, mailto destination, resource origins and basic hosting structure. It does not replace a full HTML validator or accessibility audit. Also review desktop/mobile layouts, keyboard focus and FAQ interaction. Verify content against the app audit when behaviour changes. Screenshots in local `validation/` are ignored by Git.
 
-## GitHub Pages deployment — approval required
+## GitHub Pages deployment
 
-**Do not enable Pages or deploy until publication and final legal content are explicitly approved. No deployment workflow is installed.** Do not select main/root as a branch publishing source: the website is under `dist/`, while the repository root contains review documentation.
+Pages uses GitHub Actions, not legacy main/root publishing. `.github/workflows/pages.yml` is manual-only (`workflow_dispatch`) and limited to main. It validates source, packages only `dist/`, and deploys the artifact to the `github-pages` environment. Official Actions are pinned to revisions. Build has contents-read only; deployment has Pages-write and OIDC-token permissions. There is no automatic push deployment.
 
-After approval:
+```sh
+gh workflow run pages.yml --ref main
+gh run list --workflow pages.yml
+```
 
-1. Resolve REVIEW.md, approve policy copy, set the actual effective date, and remove draft banners, review-only notes and noindex metadata. Do not backdate the policy.
-2. Re-run checks, browser validation and the public-history disclosure audit.
-3. In repository Settings → Pages, confirm GitHub Actions is the publishing mode. Add a separately reviewed, manually triggered (`workflow_dispatch`) workflow; no automatic push trigger is needed initially.
-4. Follow GitHub's current custom Pages workflow: checkout, validate with Python, configure Pages, upload **only `dist/`** using `actions/upload-pages-artifact`, then deploy with `actions/deploy-pages`. Review current action versions and pin reviewed revisions. The deploy job needs `pages: write`, `id-token: write` and the `github-pages` environment. Never upload the entire repository as the site artifact.
-5. Run the approved workflow, then verify HTTPS, navigation, accessibility and unauthenticated policy access at all four URLs. Only then supply URLs to App Store Connect or a separate iOS integration task.
+Review future changes before manual deployment. Do not switch to main/root branch publishing: that could expose review documents as website pages. Verify the resulting HTTPS pages after each release. No build compilation is needed.
 
-Official workflow guidance: https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages
-
-Expected URLs (not confirmed live):
+Public URLs:
 - https://spcurtis81.github.io/
 - https://spcurtis81.github.io/boarding-time/
 - https://spcurtis81.github.io/boarding-time/support/
 - https://spcurtis81.github.io/boarding-time/privacy/
+
+GitHub guidance: https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages
 
 ## Adding future apps
 

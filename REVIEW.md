@@ -151,3 +151,12 @@ Outcome: the policy can accurately identify these providers and describe their p
 - [ ] Verify public HTTPS pages and then separately integrate privacy/support links into the iOS app. Do not describe this website RC as an App Store-ready build.
 
 Recommendation: RC ready for developer content review; publication remains on hold. No deployment workflow is installed or activated. Prior workflow-only Pages state must be checked before source push; no Pages configuration changes are authorised here.
+
+
+## Approved publication — 28 October 2026
+
+The developer explicitly approved baseline 2cd1c12eff6acdc0f0c9a561cf00fe320841a7ca, the privacy policy, ordinary-support legitimate interests, personal Gmail management, manual accessible-mailbox deletion within 12 months of resolution, consumer Gmail/GitHub Pages suitability and public website publication. This supersedes previous publication holds; historical assessments remain evidence, not certification. No new contractual safeguards or legal assurances are inferred.
+
+Preflight: local/remote main matched baseline, tracked tree clean. Pages remained workflow-only with stale building status, cancelled legacy dynamic workflow and zero deployments. Public payload audited: four HTML pages, shared CSS and .nojekyll; approved name/email only, no address/secrets/internal audit materials. Draft banners, noindex and unpublished copy removed; privacy effective date set to actual publication date 28 October 2026. Approved substantive policy sections remain intact; only hosting/status/date wording changes. App still preparing for first public release, with no download link.
+
+Deployment is manual-only on main, official Actions pinned, build contents-read and deploy Pages-write/OIDC permissions, dist-only artifact. README/REVIEW/VALIDATION/scripts and Git history are not in the website artifact. Developer remains responsible for support operation and deletion; no Gmail/ASC/iOS settings changed. Remaining distribution/runtime privacy verification and separate in-app links are not completed by website publication. Live verification is recorded in the task report after workflow completion.
