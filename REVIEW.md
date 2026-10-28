@@ -111,3 +111,43 @@ Optional editorial improvements: simplify technical identifiers/in-memory caveat
 - Website API still reports workflow-only Pages, status building, zero deployments; no deployment workflow exists. No Pages setting was changed in this audit. No complete live-host privacy validation claimed.
 
 Disposition: conditional readiness for final policy review; not an unconditional publication or App Store GO. Required implementation is outside this audit: approved website policy copy/publication, then separate in-app policy/support links. No email, Gmail setting, release build, upload, submission or ASC privacy answer was changed.
+
+
+## Privacy policy release candidate — 28 October 2026
+
+Baseline: 26f2e6036d5c8190d80b22da154563bc39b9ee34. This section supersedes earlier pending LIA-adoption and unimplemented wording items where noted; historical audit evidence remains intact. The developer expressly approved legitimate interests for ordinary support following the documented assessment. The release candidate states that basis without provisional wording. It does not certify legal compliance or approve publication.
+
+### Implemented policy changes
+
+- Names Stephen Curtis as the personal Gmail support handler, limits use to answering/investigating/resolving/following up voluntary requests, excludes marketing/advertising and confirms app access is unaffected.
+- Describes the approved ordinary-support legitimate interests and adds a separate, prominent right-to-object paragraph. Sensitive or unrelated processing is not automatically authorised.
+- States permanent deletion from accessible mailbox locations within 12 months of resolution, including relevant Sent, archived and Trash copies; provider backup retention can extend beyond that. Necessary legal-obligation/claim exceptions remain purpose-limited. Encourages redaction/minimisation.
+- Distinguishes voluntary support messages/attachments and developer-accessible Apple platform feedback/screenshots/diagnostics from automatic app calendar uploads. Developer-held routine support copies follow the support retention arrangements; Apple controls its own service retention. Actual account access/settings were not inspected.
+- Identifies Gmail processing/automation, possible international processing and provider information links; expands GitHub host/international processing wording. Does not assert UK-only storage, end-to-end encryption, instant backup deletion, a host-log retention period or an unverified developer contract.
+- Preserves calendar permissions, fields, local persistence, backup, revocation, deletion/offload, children/rights and existing contact disclosures. Keeps draft banners, noindex metadata and unpublished review status. No design/navigation, app implementation, Gmail setting or ASC answer changes.
+
+### Completed public-document provider assessment
+
+Checked current authoritative documents on 28 October 2026:
+
+1. Google privacy policy (effective 16 October 2026): https://policies.google.com/privacy . Gmail help: https://support.google.com/mail/answer/10434152?hl=en . These describe service processing, including message/attachment storage, security and assistive features. Provider encryption descriptions are not a developer promise of end-to-end confidentiality or exclusive personal access. Consumer Gmail is not evidenced here as a Workspace processing-contract/retention/data-region product. Its suitability cannot be decided solely from a gmail.com address or presumed unlawful solely because it is consumer email.
+2. Google transfer information (effective 23 August 2025): https://policies.google.com/privacy/frameworks . Google describes global infrastructure, adequacy mechanisms, DPF including UK Extension, and SCCs where relevant. These are published provider arrangements, not proof of a bespoke agreement with Stephen or the legal basis for every specific support transfer.
+3. GitHub privacy statement (effective 27 April 2026): https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement . It describes its own controller activities and some processor contexts, international processing, SCCs and DPF/UK Extension. Do not label all hosting activities as processing solely on Stephen's instructions or infer a signed DPA from this general statement.
+4. GitHub Pages documentation: https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages . Pages logs visitor IPs for security, even without a GitHub login. The site itself adds no analytics, scripts, third-party fonts, embeds or forms. Hosting-provider processing remains distinct from app calendar processing and from developer-received support emails.
+
+Outcome: the policy can accurately identify these providers and describe their published processing and transfer information. No public-document finding establishes UK-only storage, universal processor-only roles or a developer-specific contractual safeguard. Provider roles for the actual accounts, applicable contracting entities, any controller-to-controller or processor obligations and whether a restricted-transfer assessment/arrangement is required of Stephen remain contextual legal questions. Neither those questions nor the approved LIA justify inventing safeguards or declaring legal compliance certified. No mailbox inspection, message transmission or provider-account settings change was performed.
+
+### Final publication checklist / developer decisions
+
+- [x] Developer approved ordinary-support legitimate-interests basis following the documented assessment.
+- [x] Confirmed personal Gmail management, no marketing, redaction and 12-month accessible-mailbox deletion scope incorporated.
+- [x] Current Google/GitHub public documents assessed and provider processing disclosed without contractual guarantees.
+- [ ] Developer reviews and approves exact RC wording, including legal exception scope, rights and voluntary Apple feedback handling.
+- [ ] Developer decides provider suitability and resolves applicable role/contract/transfer obligations proportionately; obtain qualified advice if uncertain. Public provider policies alone are not legal clearance.
+- [ ] Confirm real operational access/security, deletion across Sent/archive/Trash and downloaded copies, and actual developer access to platform feedback/diagnostics. No claim these settings were audited.
+- [ ] Complete remaining distribution/runtime checks identified in the archive audit; retain provisional Data Not Collected position until actual practices are confirmed. No new release build authorised by this task.
+- [ ] Confirm intended non-trader self-assessment in the relevant submission process and any context-specific identity/address obligations; no legal certification or invented address.
+- [ ] Explicitly approve website publication; only then set a real effective date and remove draft notices/review wording and noindex. Confirm publication mode/content before activating any deployment.
+- [ ] Verify public HTTPS pages and then separately integrate privacy/support links into the iOS app. Do not describe this website RC as an App Store-ready build.
+
+Recommendation: RC ready for developer content review; publication remains on hold. No deployment workflow is installed or activated. Prior workflow-only Pages state must be checked before source push; no Pages configuration changes are authorised here.
