@@ -4,7 +4,7 @@
 - Developer/seller Stephen Curtis, Apple Individual enrollment.
 - Contact stephencurtisapps@gmail.com; no residential address was read, copied or included.
 - User selected deletion of routine support correspondence within 12 months of resolution. Confirm operational mailbox deletion including Trash; provider backups may persist.
-- Authenticated account spcurtis81. Dedicated repository lookup returned 404; no existing contents overwritten and no remote created.
+- Authenticated account spcurtis81. The user subsequently created the public repository spcurtis81/spcurtis81.github.io. Before integration it had no refs, size 0 and has_pages=false; Pages endpoint returned 404. Source push is authorised after disclosure/validation checks; website publication is not. No existing contents overwritten.
 - Static, dependency-free website. No JS, forms, trackers, cookies, external fonts/media or automatic third-party resources. Links to provider policies load only on user action.
 
 ## Resolve before publication
